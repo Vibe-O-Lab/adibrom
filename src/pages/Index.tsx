@@ -1,13 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import ServicesSection from "@/components/ServicesSection";
+import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="bg-background min-h-screen">
+      <HeroSection />
+      <AboutSection />
+      <ServicesSection />
+      <ContactSection />
+      
+      {/* Footer */}
+      <footer className="py-8 px-6 text-center border-t border-gold/10">
+        <p className="text-muted-foreground text-sm">
+          © {new Date().getFullYear()} עדי ברומקיש • כל הזכויות שמורות
+        </p>
+      </footer>
+    </main>
   );
 };
 
