@@ -1,18 +1,8 @@
 import { motion } from "framer-motion";
-import forestBg from "@/assets/forest-bg.jpg";
 
 const HeroSection = () => {
   return (
-    <section 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `url(${forestBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-forest-deep/70" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       
       {/* Decorative elements */}
       <div className="absolute top-10 left-1/2 -translate-x-1/2">
