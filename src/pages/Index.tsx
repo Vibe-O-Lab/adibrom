@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import ContactSection from "@/components/ContactSection";
+import SectionDivider from "@/components/SectionDivider";
 import forestBg from "@/assets/forest-bg.jpg";
 
 const Index = () => {
@@ -21,18 +22,15 @@ const Index = () => {
       <div className="relative z-10">
         <HeroSection />
         
-        {/* Section divider */}
-        <div className="divider-gold max-w-xs mx-auto" />
+        <SectionDivider />
         
         <AboutSection />
         
-        {/* Section divider */}
-        <div className="divider-gold max-w-xs mx-auto" />
+        <SectionDivider />
         
         <ServicesSection />
         
-        {/* Section divider */}
-        <div className="divider-gold max-w-xs mx-auto" />
+        <SectionDivider />
         
         <ContactSection />
         
