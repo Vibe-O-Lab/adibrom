@@ -1,9 +1,19 @@
 import { motion } from "framer-motion";
+import forestBg from "@/assets/forest-bg.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      
+    <section
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: `url(${forestBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-forest-deep/70" />
+
       {/* Decorative elements */}
       <div className="absolute top-10 left-1/2 -translate-x-1/2">
         <motion.div
@@ -43,16 +53,14 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-gold mb-6 leading-tight">
-            עוררי את נשמתך
+            גלי את הכוח הטמון בך
           </h1>
-          
+
           <div className="space-y-2 mb-10">
             <p className="text-gold-light/80 text-sm md:text-base tracking-[0.3em] uppercase font-light">
-              ריפוי אנרגטי
+              התעוררות אנרגטית
             </p>
-            <p className="text-gold-light/60 text-sm md:text-base tracking-[0.3em] uppercase font-light">
-              התעוררות רוחנית
-            </p>
+            <p className="text-gold-light/60 text-sm md:text-base tracking-[0.3em] uppercase font-light">ריפוי רוחני</p>
             <p className="text-gold-light/40 text-sm md:text-base tracking-[0.3em] uppercase font-light">
               הנחיה אינטואיטיבית
             </p>
@@ -76,7 +84,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll indicator */}
-      <motion.div 
+      <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
