@@ -29,7 +29,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="relative py-24 px-6 bg-forest-medium/30">
+    <section id="services" className="relative py-24 px-6">
       {/* Section header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
