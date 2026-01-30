@@ -50,7 +50,7 @@ const ServicesSection = () => {
           <div className="hidden lg:block absolute -right-20 top-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-gold/10 rounded-full" />
           
           {/* Services grid */}
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-10 relative z-10">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 relative z-10">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -62,16 +62,10 @@ const ServicesSection = () => {
                   index === 1 ? "md:mt-12" : ""
                 }`}
               >
-                {/* Capsule card - tall pill shape */}
-                <div 
-                  className="relative w-44 md:w-52 border border-gold/40 overflow-hidden"
-                  style={{ 
-                    borderRadius: '100px 100px 100px 100px',
-                    aspectRatio: '3/4'
-                  }}
-                >
-                  {/* Full image as background */}
-                  <div className="absolute inset-0">
+                {/* Arch-shaped card */}
+                <div className="relative w-56 md:w-64 border border-gold/30 rounded-t-full overflow-hidden bg-forest-deep/50">
+                  {/* Image container with arch shape */}
+                  <div className="w-full aspect-square overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -79,24 +73,17 @@ const ServicesSection = () => {
                     />
                   </div>
 
-                  {/* Bottom text area - semicircle overlay */}
-                  <div 
-                    className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center px-4 py-4"
-                    style={{
-                      height: '45%',
-                      background: 'linear-gradient(to top, hsl(170 35% 8% / 0.98) 60%, hsl(170 35% 8% / 0.85) 80%, transparent 100%)',
-                      borderRadius: '0 0 100px 100px'
-                    }}
-                  >
-                    <h3 className="font-display text-xl md:text-2xl text-gold leading-tight">
+                  {/* Service info overlay */}
+                  <div className="text-center p-4 pb-6 bg-gradient-to-t from-forest-deep via-forest-deep/95 to-transparent">
+                    <h3 className="font-display text-xl md:text-2xl text-gold mb-0.5">
                       {service.title}
                     </h3>
                     {service.subtitle && (
-                      <span className="text-gold-light/60 text-xs font-display italic">
+                      <span className="text-gold-light/60 text-sm font-display italic block mb-3">
                         {service.subtitle}
                       </span>
                     )}
-                    <p className="text-foreground/60 text-[10px] md:text-xs leading-relaxed mt-1 line-clamp-2 px-2">
+                    <p className="text-foreground/70 text-xs leading-relaxed">
                       {service.description}
                     </p>
                   </div>
