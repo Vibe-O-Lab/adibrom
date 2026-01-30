@@ -62,23 +62,33 @@ const ServicesSection = () => {
                   index === 1 ? "md:mt-12" : ""
                 }`}
               >
-                {/* Split circle card */}
-                <div className="relative w-52 h-52 md:w-60 md:h-60">
-                  {/* Gold border ring */}
-                  <div className="absolute inset-0 rounded-full border border-gold/40" />
-                  
-                  {/* Top half - Image */}
-                  <div className="absolute top-0 left-0 right-0 h-1/2 overflow-hidden rounded-t-full">
+                {/* Capsule card - tall pill shape */}
+                <div 
+                  className="relative w-44 md:w-52 border border-gold/40 overflow-hidden"
+                  style={{ 
+                    borderRadius: '100px 100px 100px 100px',
+                    aspectRatio: '3/4'
+                  }}
+                >
+                  {/* Full image as background */}
+                  <div className="absolute inset-0">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-[200%] object-cover object-center"
+                      className="w-full h-full object-cover"
                     />
                   </div>
 
-                  {/* Bottom half - Text */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1/2 rounded-b-full bg-forest-deep/95 flex flex-col items-center justify-center text-center px-4">
-                    <h3 className="font-display text-lg md:text-xl text-gold leading-tight">
+                  {/* Bottom text area - semicircle overlay */}
+                  <div 
+                    className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center px-4 py-4"
+                    style={{
+                      height: '45%',
+                      background: 'linear-gradient(to top, hsl(170 35% 8% / 0.98) 60%, hsl(170 35% 8% / 0.85) 80%, transparent 100%)',
+                      borderRadius: '0 0 100px 100px'
+                    }}
+                  >
+                    <h3 className="font-display text-xl md:text-2xl text-gold leading-tight">
                       {service.title}
                     </h3>
                     {service.subtitle && (
@@ -86,7 +96,7 @@ const ServicesSection = () => {
                         {service.subtitle}
                       </span>
                     )}
-                    <p className="text-foreground/60 text-[10px] md:text-xs leading-relaxed mt-1 line-clamp-2">
+                    <p className="text-foreground/60 text-[10px] md:text-xs leading-relaxed mt-1 line-clamp-2 px-2">
                       {service.description}
                     </p>
                   </div>
