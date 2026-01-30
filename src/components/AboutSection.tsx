@@ -40,7 +40,7 @@ const AboutSection = () => {
         }} transition={{
           duration: 0.8,
           delay: 0.2
-        }} className="text-right">
+        }} className="text-center md:text-right">
             <span className="text-gold/60 text-sm tracking-[0.2em] uppercase mb-4 block">
               מי אני
             </span>
