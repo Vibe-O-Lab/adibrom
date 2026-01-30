@@ -50,7 +50,7 @@ const ServicesSection = () => {
           <div className="hidden lg:block absolute -right-20 top-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-gold/10 rounded-full" />
           
           {/* Services grid */}
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 relative z-10">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-10 relative z-10">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -62,28 +62,31 @@ const ServicesSection = () => {
                   index === 1 ? "md:mt-12" : ""
                 }`}
               >
-                {/* Arch-shaped card */}
-                <div className="relative w-56 md:w-64 border border-gold/30 rounded-t-full overflow-hidden bg-forest-deep/50">
-                  {/* Image container with arch shape */}
-                  <div className="w-full aspect-square overflow-hidden">
+                {/* Split circle card */}
+                <div className="relative w-52 h-52 md:w-60 md:h-60">
+                  {/* Gold border ring */}
+                  <div className="absolute inset-0 rounded-full border border-gold/40" />
+                  
+                  {/* Top half - Image */}
+                  <div className="absolute top-0 left-0 right-0 h-1/2 overflow-hidden rounded-t-full">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-[200%] object-cover object-center"
                     />
                   </div>
 
-                  {/* Service info overlay */}
-                  <div className="text-center p-4 pb-6 bg-gradient-to-t from-forest-deep via-forest-deep/95 to-transparent">
-                    <h3 className="font-display text-xl md:text-2xl text-gold mb-0.5">
+                  {/* Bottom half - Text */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1/2 rounded-b-full bg-forest-deep/95 flex flex-col items-center justify-center text-center px-4">
+                    <h3 className="font-display text-lg md:text-xl text-gold leading-tight">
                       {service.title}
                     </h3>
                     {service.subtitle && (
-                      <span className="text-gold-light/60 text-sm font-display italic block mb-3">
+                      <span className="text-gold-light/60 text-xs font-display italic">
                         {service.subtitle}
                       </span>
                     )}
-                    <p className="text-foreground/70 text-xs leading-relaxed">
+                    <p className="text-foreground/60 text-[10px] md:text-xs leading-relaxed mt-1 line-clamp-2">
                       {service.description}
                     </p>
                   </div>
