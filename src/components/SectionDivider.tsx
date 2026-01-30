@@ -4,32 +4,75 @@ const SectionDivider = () => {
       {/* Main horizontal line */}
       <div className="absolute inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
       
-      {/* Sunburst/radial pattern */}
-      <div className="relative w-24 h-24">
-        {/* Center dot */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-gold/60" />
+      {/* Sunburst pattern with two semi-circles */}
+      <div className="relative w-32 h-16">
+        {/* Left semi-circle with radial lines */}
+        <div className="absolute left-0 top-1/2 -translate-y-1/2">
+          <svg width="64" height="64" viewBox="0 0 64 64" className="text-gold">
+            {/* Semi-circle arc - left side */}
+            <path
+              d="M 32 8 A 24 24 0 0 0 32 56"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="0.5"
+              opacity="0.4"
+            />
+            {/* Radial lines - left semi-circle */}
+            {[...Array(9)].map((_, i) => {
+              const angle = (i * 20 - 80) * (Math.PI / 180);
+              const x1 = 32 + Math.cos(angle) * 8;
+              const y1 = 32 + Math.sin(angle) * 8;
+              const x2 = 32 + Math.cos(angle) * 24;
+              const y2 = 32 + Math.sin(angle) * 24;
+              return (
+                <line
+                  key={i}
+                  x1={x1}
+                  y1={y1}
+                  x2={x2}
+                  y2={y2}
+                  stroke="currentColor"
+                  strokeWidth="0.5"
+                  opacity="0.35"
+                />
+              );
+            })}
+          </svg>
+        </div>
         
-        {/* Radial lines */}
-        {[...Array(12)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute left-1/2 top-1/2 origin-center"
-            style={{
-              width: '1px',
-              height: '40px',
-              background: `linear-gradient(to top, hsl(var(--gold) / 0.4), transparent)`,
-              transform: `translate(-50%, -100%) rotate(${i * 15}deg)`,
-            }}
-          />
-        ))}
-        
-        {/* Partial arc */}
-        <div 
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full border border-gold/20"
-          style={{
-            clipPath: 'polygon(50% 0%, 100% 0%, 100% 50%, 50% 50%)',
-          }}
-        />
+        {/* Right semi-circle with radial lines */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2">
+          <svg width="64" height="64" viewBox="0 0 64 64" className="text-gold">
+            {/* Semi-circle arc - right side */}
+            <path
+              d="M 32 8 A 24 24 0 0 1 32 56"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="0.5"
+              opacity="0.4"
+            />
+            {/* Radial lines - right semi-circle */}
+            {[...Array(9)].map((_, i) => {
+              const angle = (i * 20 - 80) * (Math.PI / 180);
+              const x1 = 32 - Math.cos(angle) * 8;
+              const y1 = 32 + Math.sin(angle) * 8;
+              const x2 = 32 - Math.cos(angle) * 24;
+              const y2 = 32 + Math.sin(angle) * 24;
+              return (
+                <line
+                  key={i}
+                  x1={x1}
+                  y1={y1}
+                  x2={x2}
+                  y2={y2}
+                  stroke="currentColor"
+                  strokeWidth="0.5"
+                  opacity="0.35"
+                />
+              );
+            })}
+          </svg>
+        </div>
       </div>
     </div>
   );
