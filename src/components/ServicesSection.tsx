@@ -5,24 +5,24 @@ import moonCircleImg from "@/assets/moon-circle.jpg";
 
 const services = [
   {
+    title: "סדנאות עומק",
+    subtitle: "וריטריטים",
+    description: "שילוב של תנועה, נשימה ורוח עם כלים פרקטיים ליישום ביומיום.",
+    image: candleImg,
+    position: "top-left",
+  },
+  {
     title: "ליווי אישי",
     subtitle: "(1:1)",
     description: "עבודה עם דיאלוג מכוון, דמיון מודרך וקלפים למציאת בהירות ודיוק הדרך בצמתי חיים (גירושין, קריירה, משברים).",
     image: compassImg,
-    position: "top-left",
+    position: "center",
   },
   {
     title: "מעגלי נשים",
     subtitle: "וירח מלא",
     description: "מרחבים של שייכות, הקשבה וריפוי עדין בתוך קהילה תומכת.",
     image: moonCircleImg,
-    position: "center",
-  },
-  {
-    title: "סדנאות עומק",
-    subtitle: "וריטריטים",
-    description: "שילוב של תנועה, נשימה ורוח עם כלים פרקטיים ליישום ביומיום.",
-    image: candleImg,
     position: "bottom-right",
   },
 ];
