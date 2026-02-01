@@ -8,7 +8,7 @@ import forestBg from "@/assets/forest-bg.jpg";
 const Index = () => {
   return (
     <main 
-      className="min-h-screen relative"
+      className="min-h-screen relative overflow-x-hidden"
       style={{
         backgroundImage: `url(${forestBg})`,
         backgroundSize: 'cover',
