@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import adiProfile from "@/assets/adi-profile.jpeg";
 const AboutSection = () => {
   return <section id="about" className="relative py-24 px-6 overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-96 h-96 border border-gold/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] border border-gold/5 rounded-full translate-x-1/2 translate-y-1/2" />
+      {/* Background decoration - hidden on mobile to prevent overflow */}
+      <div className="hidden md:block absolute top-0 left-0 w-96 h-96 border border-gold/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
+      <div className="hidden md:block absolute bottom-0 right-0 w-[500px] h-[500px] border border-gold/5 rounded-full translate-x-1/2 translate-y-1/2" />
       
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
