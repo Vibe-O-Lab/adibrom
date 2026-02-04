@@ -41,9 +41,6 @@ const AboutSection = () => {
           duration: 0.8,
           delay: 0.2
         }} className="text-center md:text-right">
-            <span className="text-gold/60 text-sm tracking-[0.2em] uppercase mb-4 block">
-              מי אני
-            </span>
             
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-gold mb-8">
               אני עדי

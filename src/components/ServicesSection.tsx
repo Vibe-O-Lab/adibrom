@@ -30,17 +30,6 @@ const services = [
 const ServicesSection = () => {
   return (
     <section id="services" className="relative py-24 px-6">
-      {/* Section header */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-16"
-      >
-        <span className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-4 block">
-          מה אני מציעה
-        </span>
-      </motion.div>
 
       <div className="max-w-6xl mx-auto">
         {/* Decorative container with circles */}

@@ -22,15 +22,15 @@ const Index = () => {
       <div className="relative z-10">
         <HeroSection />
         
-        <SectionDivider />
+        <SectionDivider title="מי אני" />
         
         <AboutSection />
         
-        <SectionDivider />
+        <SectionDivider title="מה אני מציעה" />
         
         <ServicesSection />
         
-        <SectionDivider />
+        <SectionDivider title="יצירת קשר" />
         
         <ContactSection />
         
