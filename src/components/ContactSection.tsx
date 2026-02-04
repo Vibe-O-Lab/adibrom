@@ -56,11 +56,8 @@ END:VCARD`;
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-gold/60 text-sm tracking-[0.3em] uppercase mb-4 block">
-            בואי נדבר
-          </span>
           <h2 className="font-display text-4xl md:text-5xl text-gold">
-            יצירת קשר
+            בואי נדבר
           </h2>
         </motion.div>
 
