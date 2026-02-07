@@ -31,6 +31,10 @@ const Index = () => {
         
         <ServicesSection />
         
+        <SectionDivider title="גלריה" />
+        
+        <GallerySection />
+        
         <SectionDivider title="יצירת קשר" />
         
         <ContactSection />
