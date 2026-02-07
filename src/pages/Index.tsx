@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
+import GallerySection from "@/components/GallerySection";
 import ContactSection from "@/components/ContactSection";
 import SectionDivider from "@/components/SectionDivider";
 import forestBg from "@/assets/forest-bg.jpg";
@@ -29,6 +30,10 @@ const Index = () => {
         <SectionDivider title="מה אני מציעה" />
         
         <ServicesSection />
+        
+        <SectionDivider title="גלריה" />
+        
+        <GallerySection />
         
         <SectionDivider title="יצירת קשר" />
         
